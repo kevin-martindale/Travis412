@@ -26,4 +26,9 @@ public class SimpleCalculatorTest {
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.divide(6,3), 2);
 	}
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testDivideByZero() {
+		SimpleCalculator calc = new SimpleCalculator();
+		assertEquals(calc.divide(6,0), 0);
+	}
 }
